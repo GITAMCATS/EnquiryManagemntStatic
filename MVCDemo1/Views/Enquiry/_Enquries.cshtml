@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MVCDemo1.Models.Enquiry>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Company Name</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.EmailId</td>
+            <td>@item.Name</td>
+            <td>@item.CompanyName</td>
+            <td>
+                @*<a href="Enquiry/Edit/@item.Id">Edit</a>*@
+                @Html.ActionLink("Edit", "Edit", new {  id= item.Id }) |
+                @Html.ActionLink("Details", "Details", new {  id= item.Id}) |
+                @Html.ActionLink("Delete", "Delete", new {  id= item.Id})
+            </td>
+        </tr>
+    }
+</table>

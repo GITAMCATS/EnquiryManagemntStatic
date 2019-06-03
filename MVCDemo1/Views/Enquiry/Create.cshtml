@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create New Enquiry</h2>
+ 
+
+<div class="row">
+    @using (Html.BeginForm("Create", "Enquiry"))
+    {
+        <p>
+            <label for="text1">
+                Email Id:
+            </label><br>
+            <input type="text" name="emailid" required="required" />
+        </p>
+        <p>
+            <label for="text2">
+                Name:
+            </label><br>
+            <input type="text" name="name" required="required" />
+        </p>
+        <p>
+            <label for="text2">
+                Company Name:
+            </label><br>
+            <input type="text" name="companyname" required="required" />
+        </p>
+
+        <p>
+            <input type="submit" value=" Add Enquiry " />
+        </p>
+    }
+
+</div>
+
+
+
+
+
