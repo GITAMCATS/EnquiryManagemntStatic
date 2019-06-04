@@ -42,6 +42,13 @@ namespace MVCDemo1.Controllers
             return View();
             
         }
+
+        [HttpGet]
+        public ActionResult Details(int Id)
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult Edit(int Id)
         {
@@ -90,6 +97,7 @@ namespace MVCDemo1.Controllers
             return finenqItem;
 
         }
+
 
     }
 }
