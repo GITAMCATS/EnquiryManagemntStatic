@@ -14,7 +14,10 @@ namespace MVCDemo1
         {
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+            
+            // It Register Your Routes
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
     }
