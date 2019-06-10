@@ -13,12 +13,8 @@ namespace MVCDemo1
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-          routes.MapRoute(
-           name: "Enquiry",
-           url: "{Enquiry}/{id}",
-           defaults: new { controller = "Enquiry", action = "Details"}
-          );
-
+         
+  routes.MapRoute("Enquiry", "Enquiry/id/{id}", new { Controller = "Enquiry", Action = "Index" });
          routes.MapRoute(
            name: "Default",
            url: "{controller}/{action}/{id}",
